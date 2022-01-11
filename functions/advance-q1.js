@@ -1,6 +1,6 @@
-// Write a function which generates a secret code from a given string, by shifting characters of alphabet by N places. Example:
-// Input: encodeString("neogcamp", 2) ––> Output: pgqiecor
-// Explanation: 2 represents shifting alphabets by 2 places. a –> c, b –> d, c –> e and so on.
+// Given a sentence, return a sentence with first letter of all words as capital.
+// Example:
+// Input: toSentenceCase('we are neoGrammers') ––> Output: We Are NeoGrammers
 
 let encodeString = (str, n)=>{
   //characters range 
@@ -9,8 +9,8 @@ let encodeString = (str, n)=>{
 
   let newArr ="";
 
-  for(let i=0;i<str.length;i++){
-    let asciiCode = str.charCodeAt(i);
+  for(let char of str){
+    let asciiCode = char.charCodeAt(0);
     
      if(asciiCode > 122-n && asciiCode <= 122){
         asciiCode = 96 + (asciiCode % (122-n));
