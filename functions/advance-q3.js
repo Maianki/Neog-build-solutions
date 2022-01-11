@@ -13,7 +13,6 @@ let sortArray = arr=>{
     return arr;
 }
 
-
 //calling sortArray
 
 console.log(sortArray([100,83,32,9,45,61]))
